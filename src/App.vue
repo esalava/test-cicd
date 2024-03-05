@@ -1,7 +1,7 @@
 <template>
   Hello World.
   <br/>
-  Esta es una aplicacion de Vue por Eduardo Salavarría
+  Esta es una aplicacion de Vue por Eduardo Salavarría (Develop)
 </template>
 
 <script>
