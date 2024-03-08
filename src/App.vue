@@ -1,17 +1,16 @@
-<template>
-  Hello World.
-  <br/>
-  Esta es una aplicacion de Vue por Eduardo Salavarría (Develop)
-  <v-icon icon="mdi-ab-testing" color="primary"></v-icon>
-  <v-btn color="primary">Button</v-btn>
-  <v-btn prepend-icon="mdi-ab-testing">
-  Button
-</v-btn>
-</template>
-
-<script>
-
+<script setup>
+  import { useI18n } from 'vue-i18n'
+  const { t } = useI18n()
+  const languages = [
+    { title: 'English', value: 'en' },
+    { title: '日本語', value: 'ja' }
+  ]
 </script>
 
-<style>
-</style>
+<template>
+  <v-select 
+    v-model="$i18n.locale"
+    :items="languages"
+  />
+  <p>{{ t('hello') }}</p>
+</template>
