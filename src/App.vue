@@ -1,20 +1,38 @@
-<template>
-  Hello World.
-  <br/>
-  Esta es una aplicacion de Vue por Eduardo Salavarría
-</template>
-
-<script>
-
+<script setup>
+  //import { useI18n } from 'vue-i18n'
+  //const { t } = useI18n()
+  //const languages = [
+  //  { title: 'English', value: 'en' },
+   // { title: '日本語', value: 'ja' }
+  //]
 </script>
 
+<template>
+  <container class="main-template">
+    <v-card height="80" width="800"  class="d-flex flex-row align-center justify-space-around">
+      <RouterLink to="/">Description</RouterLink>  
+      <RouterLink to="/experience">Experience</RouterLink>
+      <RouterLink to="/projects">Projects</RouterLink>
+      <RouterLink to="/studies">Studies</RouterLink>
+      <RouterLink to="/hobbies">Hobbies & Interests</RouterLink>
+    </v-card>
+    <v-card height="500" width="800">
+        <RouterView/>
+    </v-card>
+  </container>
+</template>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background: linear-gradient(45deg, #EDA5E2, #D2AA43);
+}
+
+.main-template {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 </style>
