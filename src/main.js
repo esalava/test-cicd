@@ -8,6 +8,7 @@ import { createVuetify } from 'vuetify/lib/framework.mjs'
 import * as components from 'vuetify/lib/components'
 import * as directives from 'vuetify/lib/directives'
 import '@mdi/font/css/materialdesignicons.css'
+import {router} from '@/routes/index.js'
 
 const i18 = createI18n({
     legacy: false,
@@ -31,4 +32,4 @@ const vuetify = createVuetify({
     }
 })
 
-createApp(App).use(i18).use(vuetify).mount('#app')
+createApp(App).use(i18).use(router).use(vuetify).mount('#app')
